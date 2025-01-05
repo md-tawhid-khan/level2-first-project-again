@@ -9,6 +9,19 @@ const createStudentIntoDB=async(student:Student)=>{
  return result
 }
 
+const allStudentsIntoDB=async()=>{
+    const result=await StudentModel.find();
+    return result
+}
+
+
+const getSingleStudentIntoDB=async(studentId:string)=>{
+    const result=await StudentModel.findOne({id:studentId})
+    return result
+}
+
 export const studentServices={
-    createStudentIntoDB
+    createStudentIntoDB,
+    allStudentsIntoDB,
+    getSingleStudentIntoDB
 }
