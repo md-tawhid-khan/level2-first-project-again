@@ -25,7 +25,7 @@ export type LocalGuardian={
 export type Student = {
     id:string;
     name:UserInfo;
-    gender:'male'|'female';
+    gender:'male'|'female'|'other';
     dateOfBirth:string;
     email: string;
    contactNo:string;
